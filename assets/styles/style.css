@@ -1,13 +1,19 @@
 .navbar {
     height: 15vh;
+    position: fixed;
+    width: 100%;
 }
-.btn-outline-primary {
-    color: #007bff;
-    border-color: #007bff;
-  }
+.navbar .container-fluid .btn-outline-primary {
+  color: #007bff;
+  border-color: #007bff;
+}
   
-  .btn-outline-primary:hover {
-    background-color: #007bff;
-    color: #fff;
-  }
+.navbar .container-fluid .btn-outline-primary:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.container {
+  height: 100vh;
+}
   
