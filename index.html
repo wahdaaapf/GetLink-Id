@@ -20,11 +20,57 @@
     </nav>
 
     <div class="container">
-      yyy
+      <div class="row">
+        <div class="col-6">
+          <h1 class="__landing_h1">Agar lebih enak, ringkas dilihat pilih GetLink</h1>
+          <p class="__landing_p">Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting.</p>
+          <form action="">
+            <input id="input_link" class="__landing_input" type="text" placeholder="Masukkan Link">
+            <button id="button_link" class="__landing_button" type="submit">
+              <img id="image_link" src="assets/img/Add-Link.png">
+            </button>
+          </form>
+        </div>
+        <div class="col-6">
+          <div class="__landing_lingkaran">
+            <img class="__landing_image" src="assets/img/firl2.png">
+          </div>
+        </div>
+      </div>
     </div>
       
       
-    
+    <script>
+      const buttonImage = document.getElementById("image_link");
+      const submitButton = document.getElementById("button_link");
+
+      var newButton = document.createElement("button");
+      newButton.id = "button_copy";
+
+      var img = document.createElement("img");
+      img.id = "image_copy";
+      img.src = "assets/img/copy.png";
+
+      newButton.appendChild(img);
+      document.body.appendChild(newButton);
+
+      submitButton.addEventListener("click", function(e) {
+        e.preventDefault();
+        if (buttonImage.src.includes("Refresh.png")) 
+        {
+          buttonImage.src = "assets/img/Add-Link.png";
+          newButton.parentNode.removeChild(newButton);
+          submitButton.style.marginLeft = "10px";
+        }
+        else
+        {
+          buttonImage.src = "assets/img/Refresh.png";
+          var inputElement = document.getElementById("input_link");
+          submitButton.style.marginLeft = "20px";
+          inputElement.parentNode.insertBefore(newButton, inputElement.nextSibling);
+        }
+      });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>

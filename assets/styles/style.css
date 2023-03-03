@@ -1,19 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  width: 100%;
+  overflow: hidden;
+}
+
 .navbar {
     height: 15vh;
     position: fixed;
     width: 100%;
+    z-index: 2;
 }
 .navbar .container-fluid .btn-outline-primary {
-  color: #007bff;
-  border-color: #007bff;
+  color: #6B75E6;
+  border-color: #6B75E6;
 }
   
 .navbar .container-fluid .btn-outline-primary:hover {
-  background-color: #007bff;
+  background-color: #6971bf;
   color: #fff;
 }
 
 .container {
+  width: 100vw;
+  display: flex;
   height: 100vh;
 }
+
+.container .row {
+  margin-top: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -8vh;
+  width: 100%;
+}
+
+.container .row .col-6 .__landing_h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 48px;
+  color: #1A2474;
+  margin-bottom: 3vh;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.container .row .col-6 .__landing_p {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.container .row .col-6 .__landing_input {
+  border: 2px solid black;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 331px;
+  height: 51px;
+  padding: 10px;
+}
+
+.container .row .col-6 .__landing_input::placeholder {
+  color: #999;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.container .row .col-6 .__landing_button {
+  border: 2px solid black;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 60px;
+  background: #1A2474;
+  height: 51px;
+  padding: 10px;
+  border: none;
+  position: absolute;
+  margin-left: 9px;
+}
+
+.container .row .col-6 .__landing_lingkaran {
+  position: absolute;
+  width: 1097px;
+  height: 1085px;
+  left: 965px;
+  top: -270px;
+  background: #6B75E6;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.container .row .col-6 .__landing_lingkaran .__landing_image {
+  width: 440px;
+  height: 560px;
+  left: 977px;
+  top: 326px;
+  margin-top: 60vh;
+}
+
+.container .row .col-6 form #button_copy {
+  margin-left: -50px;
+  background: #1A2474;
+  padding: 6px;
+  border: none;
+  border-radius: 10px;
+}
+
   
